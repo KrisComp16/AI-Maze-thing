@@ -16,25 +16,25 @@ public class PacMan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("w"))
+        if ((Input.GetKey("w")) || (Input.GetKey("up")))
         {
             transform.position += Vector3.back * speed * Time.deltaTime;
             transform.localRotation = Quaternion.Euler(0, 0, 90);
 
         }
-        else if (Input.GetKey("s"))
+        else if ((Input.GetKey("s")) || (Input.GetKey("down")))
         {
             transform.position += Vector3.forward * speed * Time.deltaTime;
             transform.localRotation = Quaternion.Euler(0, 0, 270);
 
         }
-        else if (Input.GetKey("a"))
+        else if ((Input.GetKey("a")) || (Input.GetKey("left")))
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
             transform.localRotation = Quaternion.Euler(0, 0, 0);
 
         }
-        else if (Input.GetKey("d"))
+        else if ((Input.GetKey("d")) || (Input.GetKey("right")))
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
             transform.localRotation = Quaternion.Euler(0, 0, 180);
@@ -47,6 +47,7 @@ public class PacMan : MonoBehaviour
         }
     }
 
+    /*
     void OnCollisionEnter(Collider other)
     {
 
@@ -60,4 +61,5 @@ public class PacMan : MonoBehaviour
         }
 
     }
+    */
 }
